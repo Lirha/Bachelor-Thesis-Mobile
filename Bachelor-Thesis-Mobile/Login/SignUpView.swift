@@ -16,7 +16,6 @@ struct SignUpView: View {
     @State var maxCircleHeight: CGFloat = 0
     @State var visible = false
     @State var revisible = false
-    @State var showAlert = false
     
     @StateObject var viewModel = SignUpViewModel()
     
@@ -111,7 +110,7 @@ struct SignUpView: View {
                         .cornerRadius(10)
                         .shadow(color: .gray, radius: 10, x: 0.0, y: 10)
                 }.padding(.top, 20)
-                    .alert(isPresented: $showAlert) {
+                    .alert(isPresented: $viewModel.showAlert) {
                         Alert(title: Text("Please fill all the contents properly"))
                     }
                 Spacer()
@@ -131,17 +130,6 @@ struct SignUpView: View {
     }
     
     func verifyCredentials() {
-//        if !self.email.isEmpty && !self.password.isEmpty, self.password == self.confirmPassword {
-//            Auth.auth().createUser(withEmail: email , password: password) {result , error in
-//                if let err = error {
-//                    print("Failed to create user:", err)
-//                    return
-//                }
-//                print("Successfully created user \(result)")
-//            }
-//        } else {
-//            showAlert.toggle()
-//        }
         viewModel.verifyCredentials(email: self.email, password: self.password, confirmPassword: self.confirmPassword)
     }
 }

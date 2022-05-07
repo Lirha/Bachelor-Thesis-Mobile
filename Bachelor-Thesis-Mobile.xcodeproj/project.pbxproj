@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ADA67C81D5A2EBA80D25DDB /* Pods_Bachelor_Thesis_MobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041A98877A046C32D1712056 /* Pods_Bachelor_Thesis_MobileTests.framework */; };
+		41C35A7FE6A070585ACA25C7 /* Pods_Bachelor_Thesis_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFA9B9EDE4219DE16CAAD49 /* Pods_Bachelor_Thesis_Mobile.framework */; };
+		42BF7FF528267E3C00A315FF /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BF7FF428267E3C00A315FF /* MainScreenView.swift */; };
 		42C331D52825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C331D42825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift */; };
 		42C331D72825AFBB005D90FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C331D62825AFBB005D90FC /* ContentView.swift */; };
 		42C331D92825AFBE005D90FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C331D82825AFBE005D90FC /* Assets.xcassets */; };
@@ -16,6 +19,11 @@
 		42C331EB2825AFBF005D90FC /* Bachelor_Thesis_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C331EA2825AFBF005D90FC /* Bachelor_Thesis_MobileTests.swift */; };
 		42C331F52825AFBF005D90FC /* Bachelor_Thesis_MobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C331F42825AFBF005D90FC /* Bachelor_Thesis_MobileUITests.swift */; };
 		42C331F72825AFBF005D90FC /* Bachelor_Thesis_MobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C331F62825AFBF005D90FC /* Bachelor_Thesis_MobileUITestsLaunchTests.swift */; };
+		42C332072825B63D005D90FC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C332062825B63D005D90FC /* LoginView.swift */; };
+		42C332092825B666005D90FC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C332082825B666005D90FC /* SignUpView.swift */; };
+		42C3320B2825B688005D90FC /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C3320A2825B688005D90FC /* SignUpViewModel.swift */; };
+		42C3320D2825B781005D90FC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42C3320C2825B781005D90FC /* GoogleService-Info.plist */; };
+		720DD4819F61F04C655EEB35 /* Pods_Bachelor_Thesis_Mobile_Bachelor_Thesis_MobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3233D629AB95AC8D234B3EBB /* Pods_Bachelor_Thesis_Mobile_Bachelor_Thesis_MobileUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041A98877A046C32D1712056 /* Pods_Bachelor_Thesis_MobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bachelor_Thesis_MobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3233D629AB95AC8D234B3EBB /* Pods_Bachelor_Thesis_Mobile_Bachelor_Thesis_MobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bachelor_Thesis_Mobile_Bachelor_Thesis_MobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42BF7FF428267E3C00A315FF /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		42C331D12825AFBB005D90FC /* Bachelor-Thesis-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bachelor-Thesis-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C331D42825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bachelor_Thesis_MobileApp.swift; sourceTree = "<group>"; };
 		42C331D62825AFBB005D90FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +59,17 @@
 		42C331F02825AFBF005D90FC /* Bachelor-Thesis-MobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bachelor-Thesis-MobileUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C331F42825AFBF005D90FC /* Bachelor_Thesis_MobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bachelor_Thesis_MobileUITests.swift; sourceTree = "<group>"; };
 		42C331F62825AFBF005D90FC /* Bachelor_Thesis_MobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bachelor_Thesis_MobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		42C332062825B63D005D90FC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		42C332082825B666005D90FC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		42C3320A2825B688005D90FC /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		42C3320C2825B781005D90FC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		62B40238DAD7284722F5E968 /* Pods-Bachelor-Thesis-Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bachelor-Thesis-Mobile.debug.xcconfig"; path = "Target Support Files/Pods-Bachelor-Thesis-Mobile/Pods-Bachelor-Thesis-Mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		7DFA9B9EDE4219DE16CAAD49 /* Pods_Bachelor_Thesis_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bachelor_Thesis_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D2916BF96C2C52D86883994 /* Pods-Bachelor-Thesis-MobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bachelor-Thesis-MobileTests.debug.xcconfig"; path = "Target Support Files/Pods-Bachelor-Thesis-MobileTests/Pods-Bachelor-Thesis-MobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD162005A678EAB07CF60166 /* Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E926EF423B329E37C0A58ED4 /* Pods-Bachelor-Thesis-MobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bachelor-Thesis-MobileTests.release.xcconfig"; path = "Target Support Files/Pods-Bachelor-Thesis-MobileTests/Pods-Bachelor-Thesis-MobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3FEB910E60C58C24DF5972D /* Pods-Bachelor-Thesis-Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bachelor-Thesis-Mobile.release.xcconfig"; path = "Target Support Files/Pods-Bachelor-Thesis-Mobile/Pods-Bachelor-Thesis-Mobile.release.xcconfig"; sourceTree = "<group>"; };
+		F6FEA5220B74952BA2215D74 /* Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.release.xcconfig"; path = "Target Support Files/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C35A7FE6A070585ACA25C7 /* Pods_Bachelor_Thesis_Mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADA67C81D5A2EBA80D25DDB /* Pods_Bachelor_Thesis_MobileTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,12 +93,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720DD4819F61F04C655EEB35 /* Pods_Bachelor_Thesis_Mobile_Bachelor_Thesis_MobileUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15A9AE6D518048EDAFA263E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DFA9B9EDE4219DE16CAAD49 /* Pods_Bachelor_Thesis_Mobile.framework */,
+				3233D629AB95AC8D234B3EBB /* Pods_Bachelor_Thesis_Mobile_Bachelor_Thesis_MobileUITests.framework */,
+				041A98877A046C32D1712056 /* Pods_Bachelor_Thesis_MobileTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42BF7FF328267E1500A315FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42BF7FF428267E3C00A315FF /* MainScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		42C331C82825AFBB005D90FC = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +125,8 @@
 				42C331E92825AFBF005D90FC /* Bachelor-Thesis-MobileTests */,
 				42C331F32825AFBF005D90FC /* Bachelor-Thesis-MobileUITests */,
 				42C331D22825AFBB005D90FC /* Products */,
+				CF9A42AB6D2E59AE40226DC9 /* Pods */,
+				15A9AE6D518048EDAFA263E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +143,9 @@
 		42C331D32825AFBB005D90FC /* Bachelor-Thesis-Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				42BF7FF328267E1500A315FF /* Views */,
+				42C3320C2825B781005D90FC /* GoogleService-Info.plist */,
+				42C332032825B608005D90FC /* Login */,
 				42C331D42825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift */,
 				42C331D62825AFBB005D90FC /* ContentView.swift */,
 				42C331D82825AFBE005D90FC /* Assets.xcassets */,
@@ -133,6 +181,29 @@
 			path = "Bachelor-Thesis-MobileUITests";
 			sourceTree = "<group>";
 		};
+		42C332032825B608005D90FC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				42C332062825B63D005D90FC /* LoginView.swift */,
+				42C332082825B666005D90FC /* SignUpView.swift */,
+				42C3320A2825B688005D90FC /* SignUpViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CF9A42AB6D2E59AE40226DC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62B40238DAD7284722F5E968 /* Pods-Bachelor-Thesis-Mobile.debug.xcconfig */,
+				F3FEB910E60C58C24DF5972D /* Pods-Bachelor-Thesis-Mobile.release.xcconfig */,
+				AD162005A678EAB07CF60166 /* Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.debug.xcconfig */,
+				F6FEA5220B74952BA2215D74 /* Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.release.xcconfig */,
+				8D2916BF96C2C52D86883994 /* Pods-Bachelor-Thesis-MobileTests.debug.xcconfig */,
+				E926EF423B329E37C0A58ED4 /* Pods-Bachelor-Thesis-MobileTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42C331FA2825AFBF005D90FC /* Build configuration list for PBXNativeTarget "Bachelor-Thesis-Mobile" */;
 			buildPhases = (
+				098DE606D28FCAA71F38B3F1 /* [CP] Check Pods Manifest.lock */,
 				42C331CD2825AFBB005D90FC /* Sources */,
 				42C331CE2825AFBB005D90FC /* Frameworks */,
 				42C331CF2825AFBB005D90FC /* Resources */,
+				362EE7A0BECB60314EE402F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42C331FD2825AFBF005D90FC /* Build configuration list for PBXNativeTarget "Bachelor-Thesis-MobileTests" */;
 			buildPhases = (
+				165F0C73CF5E811B48099655 /* [CP] Check Pods Manifest.lock */,
 				42C331E22825AFBF005D90FC /* Sources */,
 				42C331E32825AFBF005D90FC /* Frameworks */,
 				42C331E42825AFBF005D90FC /* Resources */,
@@ -175,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42C332002825AFBF005D90FC /* Build configuration list for PBXNativeTarget "Bachelor-Thesis-MobileUITests" */;
 			buildPhases = (
+				C4E6FB30071EAAB04C5794C6 /* [CP] Check Pods Manifest.lock */,
 				42C331EC2825AFBF005D90FC /* Sources */,
 				42C331ED2825AFBF005D90FC /* Frameworks */,
 				42C331EE2825AFBF005D90FC /* Resources */,
+				E411B3EB158AD4F079F3A658 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +315,7 @@
 			files = (
 				42C331DC2825AFBF005D90FC /* Preview Assets.xcassets in Resources */,
 				42C331D92825AFBE005D90FC /* Assets.xcassets in Resources */,
+				42C3320D2825B781005D90FC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +335,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		098DE606D28FCAA71F38B3F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bachelor-Thesis-Mobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		165F0C73CF5E811B48099655 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bachelor-Thesis-MobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		362EE7A0BECB60314EE402F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bachelor-Thesis-Mobile/Pods-Bachelor-Thesis-Mobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bachelor-Thesis-Mobile/Pods-Bachelor-Thesis-Mobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bachelor-Thesis-Mobile/Pods-Bachelor-Thesis-Mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4E6FB30071EAAB04C5794C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E411B3EB158AD4F079F3A658 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests/Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		42C331CD2825AFBB005D90FC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,7 +446,11 @@
 				42C331DE2825AFBF005D90FC /* Persistence.swift in Sources */,
 				42C331E12825AFBF005D90FC /* Bachelor_Thesis_Mobile.xcdatamodeld in Sources */,
 				42C331D72825AFBB005D90FC /* ContentView.swift in Sources */,
+				42C332072825B63D005D90FC /* LoginView.swift in Sources */,
+				42C332092825B666005D90FC /* SignUpView.swift in Sources */,
 				42C331D52825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift in Sources */,
+				42C3320B2825B688005D90FC /* SignUpViewModel.swift in Sources */,
+				42BF7FF528267E3C00A315FF /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +603,7 @@
 		};
 		42C331FB2825AFBF005D90FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62B40238DAD7284722F5E968 /* Pods-Bachelor-Thesis-Mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +632,7 @@
 		};
 		42C331FC2825AFBF005D90FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3FEB910E60C58C24DF5972D /* Pods-Bachelor-Thesis-Mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +661,7 @@
 		};
 		42C331FE2825AFBF005D90FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D2916BF96C2C52D86883994 /* Pods-Bachelor-Thesis-MobileTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +681,7 @@
 		};
 		42C331FF2825AFBF005D90FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E926EF423B329E37C0A58ED4 /* Pods-Bachelor-Thesis-MobileTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -513,6 +701,7 @@
 		};
 		42C332012825AFBF005D90FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD162005A678EAB07CF60166 /* Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +719,7 @@
 		};
 		42C332022825AFBF005D90FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6FEA5220B74952BA2215D74 /* Pods-Bachelor-Thesis-Mobile-Bachelor-Thesis-MobileUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

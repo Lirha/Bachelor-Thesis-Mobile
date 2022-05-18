@@ -15,6 +15,10 @@ struct LoginView: View {
     @State var visible = false
     @State var showSignUp = false
     @State var showAlert = false
+    @State var error = ""
+    @State var errorMessage = ""
+    
+    @StateObject var viewModel = LoginViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -25,6 +29,7 @@ struct LoginView: View {
                 HeartAnimationView()
                 Spacer()
                 
+                // Login
                 VStack {
                     Text("Login")
                         .font(.title)
@@ -95,12 +100,12 @@ struct LoginView: View {
                             .shadow(color: .gray, radius: 10, x: 0.0, y: 10)
                     }.padding(.top, 20)
                         .alert(isPresented: $showAlert) {
-                            Alert(title: Text("Please fill all the contents properly"))
+                            Alert(title: Text("Error"), message: Text(error))
                         }
                     
                     // Forget Password...
                     Button {
-                        
+                        resetPassword()
                     } label: {
                         Text("Forget password")
                             .fontWeight(.bold)
@@ -133,15 +138,38 @@ struct LoginView: View {
             Auth.auth().signIn(withEmail: email, password: password) { result, error in
                 if let err = error {
                     print("Failed to login:", err)
+                    self.error = "Failed to login: \(error!.localizedDescription)"
+//                    self.error = "Incorrect Email or Password"
+//                    self.errorMessage = "Please check your details and try again"
+                    showAlert.toggle()
                     return
-                }
-                else {
-                    print("Success \(result)")
-                    NavigationLink("MainScreen", destination: MainScreenView())
+                } else {
+                    print("Success \(result?.user)")
                 }
             }
         } else {
+            error = "Please fill all the contents properly"
             showAlert.toggle()
+        }
+    }
+    
+    // Reset Password
+    func resetPassword() {
+        if self.email != "" {
+            Auth.auth().sendPasswordReset(withEmail: self.email) { (err) in
+                
+                if err != nil {
+                    self.error = err!.localizedDescription
+                    self.showAlert.toggle()
+                    return
+                }
+                self.error = "Password reset"
+                self.errorMessage = "Reset password link has been sent successfully"
+                self.showAlert.toggle()
+            }
+        } else {
+            self.error = "Email Id is empty"
+            self.showAlert.toggle()
         }
     }
 }

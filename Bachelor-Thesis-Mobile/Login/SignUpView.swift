@@ -111,7 +111,7 @@ struct SignUpView: View {
                         .shadow(color: .gray, radius: 10, x: 0.0, y: 10)
                 }.padding(.top, 20)
                     .alert(isPresented: $viewModel.showAlert) {
-                        Alert(title: Text("Please fill all the contents properly"))
+                        Alert(title: Text("Error"), message: Text(viewModel.errorMessage))
                     }
                 Spacer()
             }

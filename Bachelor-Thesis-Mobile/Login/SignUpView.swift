@@ -17,6 +17,8 @@ struct SignUpView: View {
     @State var visible = false
     @State var revisible = false
     
+    @Environment(\.presentationMode) var presentationMode
+    
     @StateObject var viewModel = SignUpViewModel()
     
     var body: some View {
@@ -33,14 +35,17 @@ struct SignUpView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 // User
-                VStack(alignment: .leading, spacing: 8, content: {
+                VStack(alignment: .leading, spacing: 0, content: {
                     Text("User Name")
                         .font(.system(size: 20, weight: .bold))
                         .foregroundColor(.black.opacity(0.8))
-                    TextField("username@gmail.com", text: $email)
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(.black)
-                        .padding(.top, 5)
+                    HStack {
+                        TextField("username@gmail.com", text: $email)
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundColor(.black)
+                            .padding(.top, 5)
+                    }
+                  
                     Divider()
                 })
                 .padding(.top, 25)
@@ -52,8 +57,12 @@ struct SignUpView: View {
                         .foregroundColor(.black.opacity(0.8))
                     HStack {
                         if self.visible {
-                            TextField("Password", text: self.$password)
-                                .font(.system(size: 18, weight: .semibold))
+                            HStack {
+                                TextField("password", text: $email)
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(.black)
+                                    .padding(.top, 5)
+                            }
                         } else {
                             SecureField("password", text: $password)
                                 .font(.system(size: 18, weight: .semibold))
@@ -78,13 +87,20 @@ struct SignUpView: View {
                         .foregroundColor(.black.opacity(0.8))
                     HStack {
                         if self.revisible {
-                            TextField("Confirm Password", text: self.$confirmPassword)
-                                .font(.system(size: 18, weight: .semibold))
+                                HStack {
+                                    TextField("confirm password", text: $email)
+                                        .font(.system(size: 18, weight: .semibold))
+                                        .foregroundColor(.black)
+                                        .padding(.top, 5)
+                                        
+                                }
                         } else {
-                            SecureField("Confirm password", text: $confirmPassword)
-                                .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.black)
-                                .padding(.top, 5)
+                            HStack {
+                                SecureField("Confirm password", text: $confirmPassword)
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(.black)
+                                    .padding(.top, 5)
+                            }
                         }
                         Button {
                             self.revisible.toggle()
@@ -111,7 +127,7 @@ struct SignUpView: View {
                         .shadow(color: .gray, radius: 10, x: 0.0, y: 10)
                 }.padding(.top, 20)
                     .alert(isPresented: $viewModel.showAlert) {
-                        Alert(title: Text("Error"), message: Text(viewModel.errorMessage))
+                        Alert(title: Text(viewModel.alertTitle), message: Text(viewModel.alertMessage), dismissButton: viewModel.alertTitle == "Succes" ? .default(Text("OK"), action: {presentationMode.wrappedValue.dismiss()}) : .default(Text("OK")))
                     }
                 Spacer()
             }

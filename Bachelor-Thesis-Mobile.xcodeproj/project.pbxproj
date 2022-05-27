@@ -11,6 +11,9 @@
 		41C35A7FE6A070585ACA25C7 /* Pods_Bachelor_Thesis_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFA9B9EDE4219DE16CAAD49 /* Pods_Bachelor_Thesis_Mobile.framework */; };
 		4212331A2840DFD700425ED4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421233192840DFD700425ED4 /* HomeView.swift */; };
 		4212331C2840F92300425ED4 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212331B2840F92300425ED4 /* HomeScreenView.swift */; };
+		4212331F2841061300425ED4 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4212331E2841061300425ED4 /* SideMenu.swift */; };
+		421233212841068800425ED4 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421233202841068800425ED4 /* CustomTabView.swift */; };
+		42123323284106E200425ED4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123322284106E200425ED4 /* Home.swift */; };
 		42B500A128317B940064FFA5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B500A028317B940064FFA5 /* LoginViewModel.swift */; };
 		42B500A32831A0880064FFA5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B500A22831A0880064FFA5 /* ErrorView.swift */; };
 		42BF7FF528267E3C00A315FF /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BF7FF428267E3C00A315FF /* MainScreenView.swift */; };
@@ -52,6 +55,9 @@
 		3233D629AB95AC8D234B3EBB /* Pods_Bachelor_Thesis_Mobile_Bachelor_Thesis_MobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bachelor_Thesis_Mobile_Bachelor_Thesis_MobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		421233192840DFD700425ED4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4212331B2840F92300425ED4 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		4212331E2841061300425ED4 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		421233202841068800425ED4 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		42123322284106E200425ED4 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		42B500A028317B940064FFA5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		42B500A22831A0880064FFA5 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		42BF7FF428267E3C00A315FF /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
@@ -118,10 +124,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		42BF7FF328267E1500A315FF /* Views */ = {
+		4212331D2841051500425ED4 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
 				42BF7FF428267E3C00A315FF /* MainScreenView.swift */,
+				4212331E2841061300425ED4 /* SideMenu.swift */,
+				421233202841068800425ED4 /* CustomTabView.swift */,
+				42123322284106E200425ED4 /* Home.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		42BF7FF328267E1500A315FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +167,7 @@
 		42C331D32825AFBB005D90FC /* Bachelor-Thesis-Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				4212331D2841051500425ED4 /* MainScreen */,
 				42BF7FF328267E1500A315FF /* Views */,
 				42C3320C2825B781005D90FC /* GoogleService-Info.plist */,
 				42C332032825B608005D90FC /* Login */,
@@ -462,11 +479,14 @@
 				4212331A2840DFD700425ED4 /* HomeView.swift in Sources */,
 				42C332072825B63D005D90FC /* LoginView.swift in Sources */,
 				42C332092825B666005D90FC /* SignUpView.swift in Sources */,
+				42123323284106E200425ED4 /* Home.swift in Sources */,
 				42B500A32831A0880064FFA5 /* ErrorView.swift in Sources */,
+				4212331F2841061300425ED4 /* SideMenu.swift in Sources */,
 				42C331D52825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift in Sources */,
 				42C3320B2825B688005D90FC /* SignUpViewModel.swift in Sources */,
 				42BF7FF528267E3C00A315FF /* MainScreenView.swift in Sources */,
 				42B500A128317B940064FFA5 /* LoginViewModel.swift in Sources */,
+				421233212841068800425ED4 /* CustomTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

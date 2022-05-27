@@ -21,7 +21,7 @@ struct HomeView: View {
         NavigationView {
             VStack  {
                 if self.status {
-                    HomeScreenView()
+                    MainScreenView()
                 } else {
                     ZStack {
                         NavigationLink( "", destination: LoginView()).hidden()

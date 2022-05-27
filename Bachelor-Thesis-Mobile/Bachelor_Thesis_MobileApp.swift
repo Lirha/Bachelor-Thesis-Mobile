@@ -13,7 +13,8 @@ struct Bachelor_Thesis_MobileApp: App {
 
     var body: some Scene {
         WindowGroup {
-          LoginView()
+            //  HomeScreenView()
+            ContentView()
         }
     }
 }

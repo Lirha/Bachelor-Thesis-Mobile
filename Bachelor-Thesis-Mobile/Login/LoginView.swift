@@ -17,14 +17,16 @@ struct LoginView: View {
     @State var showAlert = false
     @State var error = ""
     @State var errorMessage = ""
+//    @Binding var show : Bool
+    
     
     @StateObject var viewModel = LoginViewModel()
     
-    init() {
-        FirebaseApp.configure()
-    }
+//    init() {
+//        FirebaseApp.configure()
+//    }
     var body: some View {
-        NavigationView {
+  //      NavigationView {
             VStack {
                 HeartAnimationView()
                 Spacer()
@@ -130,7 +132,7 @@ struct LoginView: View {
                 }, alignment: .bottom)
             .navigationTitle("")
             .navigationBarHidden(true)
-        }
+    //    }
     }
     
     func verifyCredentials() {
@@ -145,6 +147,8 @@ struct LoginView: View {
                     return
                 } else {
                     print("Success \(result?.user)")
+                    UserDefaults.standard.set(true, forKey: "status")
+                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
                 }
             }
         } else {
@@ -200,6 +204,7 @@ struct HeartAnimationView: View {
             Spacer()
         }.onAppear(perform: addAnimation)
     }
+    
     func addAnimation() {
         guard !animate else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {

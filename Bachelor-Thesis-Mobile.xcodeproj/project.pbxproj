@@ -16,6 +16,7 @@
 		42123323284106E200425ED4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123322284106E200425ED4 /* Home.swift */; };
 		42B500A128317B940064FFA5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B500A028317B940064FFA5 /* LoginViewModel.swift */; };
 		42B500A32831A0880064FFA5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B500A22831A0880064FFA5 /* ErrorView.swift */; };
+		42BAD22128416211001D98CE /* AddDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BAD22028416211001D98CE /* AddDataView.swift */; };
 		42BF7FF528267E3C00A315FF /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BF7FF428267E3C00A315FF /* MainScreenView.swift */; };
 		42C331D52825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C331D42825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift */; };
 		42C331D72825AFBB005D90FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C331D62825AFBB005D90FC /* ContentView.swift */; };
@@ -60,6 +61,7 @@
 		42123322284106E200425ED4 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		42B500A028317B940064FFA5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		42B500A22831A0880064FFA5 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		42BAD22028416211001D98CE /* AddDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataView.swift; sourceTree = "<group>"; };
 		42BF7FF428267E3C00A315FF /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		42C331D12825AFBB005D90FC /* Bachelor-Thesis-Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bachelor-Thesis-Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C331D42825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bachelor_Thesis_MobileApp.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				4212331E2841061300425ED4 /* SideMenu.swift */,
 				421233202841068800425ED4 /* CustomTabView.swift */,
 				42123322284106E200425ED4 /* Home.swift */,
+				42BAD22028416211001D98CE /* AddDataView.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				42123323284106E200425ED4 /* Home.swift in Sources */,
 				42B500A32831A0880064FFA5 /* ErrorView.swift in Sources */,
 				4212331F2841061300425ED4 /* SideMenu.swift in Sources */,
+				42BAD22128416211001D98CE /* AddDataView.swift in Sources */,
 				42C331D52825AFBB005D90FC /* Bachelor_Thesis_MobileApp.swift in Sources */,
 				42C3320B2825B688005D90FC /* SignUpViewModel.swift in Sources */,
 				42BF7FF528267E3C00A315FF /* MainScreenView.swift in Sources */,

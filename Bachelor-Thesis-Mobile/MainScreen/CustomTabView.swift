@@ -37,7 +37,7 @@ struct CustomTabView: View {
                 Button {
                     
                 } label: {
-                    Image("person.circle.fill")
+                    Image(systemName: "person.circle")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 35, height: 35)
@@ -63,8 +63,8 @@ struct CustomTabView: View {
                     .tag("Home")
                 
                 //Replace your custom views here..
-                Text("Discover")
-                    .tag("Discover")
+                AddDataView()
+                    .tag("Test")
                 
                 Text("Profile")
                     .tag("Profile")

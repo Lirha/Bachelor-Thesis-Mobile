@@ -27,6 +27,7 @@ struct LoginView: View {
 //    }
     var body: some View {
   //      NavigationView {
+        ZStack {
             VStack {
                 HeartAnimationView()
                 Spacer()
@@ -49,7 +50,7 @@ struct LoginView: View {
                         HStack {
                             TextField("username@gmail.com", text: $email)
                                 .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                                 .padding(.top, 5)
                         }
                         
@@ -67,12 +68,12 @@ struct LoginView: View {
                             if self.visible {
                                 TextField("password", text: self.$password)
                                     .font(.system(size: 20, weight: .semibold))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top, 5)
                             } else {
                                 SecureField("password", text: $password)
                                     .font(.system(size: 20, weight: .semibold))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top, 5)
                             }
                             Button {
@@ -133,7 +134,8 @@ struct LoginView: View {
             .navigationTitle("")
             .navigationBarHidden(true)
     //    }
-    }
+    }.preferredColorScheme(.dark)
+}
     
     func verifyCredentials() {
         if !self.email.isEmpty && !self.password.isEmpty {
@@ -188,7 +190,7 @@ struct HeartAnimationView: View {
                 .renderingMode(.template)
                 .resizable()
                 .scaledToFill()
-                .foregroundColor(animate ? Color.black : Color.black.opacity(0.8))
+                .foregroundColor(animate ? Color.white : Color.black.opacity(0.8))
                 .frame(width: 190, height: 300)
             //    .frame(width: 150, height: 250)
             //  .frame(width: 50, height: 150)
@@ -198,7 +200,7 @@ struct HeartAnimationView: View {
                         x: 0,
                         y: animate ? 50 : 30)
                 .scaleEffect(animate ? 1.1 : 1.0)
-                .offset(y: animate ? -7 : 0)
+                .offset(y: animate ? -7 : 1)
             
             // Daca decomentez Spacer() - ul asta, nu se mai plimba ecranul
             Spacer()

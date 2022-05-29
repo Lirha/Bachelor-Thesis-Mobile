@@ -9,16 +9,20 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            Image("realisticHeart")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: getRect().width - 30 , height: 250)
-                .cornerRadius(18)
-            Text("Description")
-                .font(.caption)
-                .foregroundColor(.gray)
-        }.padding()
+        VStack {
+            Text("")
+        }
+        .ignoresSafeArea()
+//        VStack(alignment: .leading, spacing: 15) {
+//            Image("realisticHeart")
+//                .resizable()
+//                .aspectRatio(contentMode: .fill)
+//                .frame(width: getRect().width - 30 , height: 250)
+//                .cornerRadius(18)
+//            Text("Description")
+//                .font(.caption)
+//                .foregroundColor(.gray)
+//        }.padding()
     }
 }
 

@@ -30,7 +30,7 @@ struct SignUpView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .font(.system(size: 40))
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .kerning(1.9)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -38,11 +38,11 @@ struct SignUpView: View {
                 VStack(alignment: .leading, spacing: 0, content: {
                     Text("User Name")
                         .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(.black.opacity(0.8))
+                        .foregroundColor(.white.opacity(0.8))
                     HStack {
                         TextField("username@gmail.com", text: $email)
                             .font(.system(size: 18, weight: .semibold))
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .padding(.top, 5)
                     }
                   
@@ -54,19 +54,19 @@ struct SignUpView: View {
                 VStack(alignment: .leading, spacing: 8, content: {
                     Text("Password")
                         .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(.black.opacity(0.8))
+                        .foregroundColor(.white.opacity(0.8))
                     HStack {
                         if self.visible {
                             HStack {
                                 TextField("password", text: $email)
                                     .font(.system(size: 18, weight: .semibold))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top, 5)
                             }
                         } else {
                             SecureField("password", text: $password)
                                 .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                                 .padding(.top, 5)
                         }
                         Button {
@@ -84,13 +84,13 @@ struct SignUpView: View {
                 VStack(alignment: .leading, spacing: 8, content: {
                     Text("Confirm Password")
                         .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(.black.opacity(0.8))
+                        .foregroundColor(.white.opacity(0.8))
                     HStack {
                         if self.revisible {
                                 HStack {
                                     TextField("confirm password", text: $email)
                                         .font(.system(size: 18, weight: .semibold))
-                                        .foregroundColor(.black)
+                                        .foregroundColor(.white)
                                         .padding(.top, 5)
                                         
                                 }
@@ -98,7 +98,7 @@ struct SignUpView: View {
                             HStack {
                                 SecureField("Confirm password", text: $confirmPassword)
                                     .font(.system(size: 18, weight: .semibold))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top, 5)
                             }
                         }
@@ -121,7 +121,7 @@ struct SignUpView: View {
                         .frame(height: 50)
                         .font(.headline)
                         .frame(maxWidth: .infinity)
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .background(Color.gray.opacity(0.6))
                         .cornerRadius(10)
                         .shadow(color: .gray, radius: 10, x: 0.0, y: 10)

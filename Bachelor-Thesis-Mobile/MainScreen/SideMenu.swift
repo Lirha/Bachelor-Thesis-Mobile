@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SideMenu: View {
     
@@ -37,7 +38,7 @@ struct SideMenu: View {
             //Tab Buttons
             VStack(alignment: .leading, spacing: 25) {
                 CustomTabButton(icon: "theatermasks.fill", title: "Home")
-                CustomTabButton(icon: "safari.fill", title: "Discover")
+                CustomTabButton(icon: "stethoscope", title: "Test")
                 CustomTabButton(icon: "person.fill", title: "Profile")
                 CustomTabButton(icon: "gearshape.fill", title: "Setting")
 
@@ -59,7 +60,8 @@ struct SideMenu: View {
           )
         
         // Not sure about this one
-      //  .ignoresSafeArea()
+     //  .ignoresSafeArea()
+        
     }
     
     //Custom Button
@@ -68,8 +70,11 @@ struct SideMenu: View {
     func CustomTabButton(icon: String, title: String) -> some View {
         Button {
             if title == "Logout" {
-                // Do action here>>>
-                print("Logout")
+                withAnimation {
+                    try! Auth.auth().signOut()
+                    UserDefaults.standard.set(false, forKey: "status")
+                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                }
             } else {
                 withAnimation {
                     currentTab = title

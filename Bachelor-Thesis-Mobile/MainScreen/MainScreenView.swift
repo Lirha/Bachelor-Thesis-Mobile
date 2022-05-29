@@ -10,7 +10,7 @@ import SwiftUI
 struct MainScreenView: View {
     
     // Curent Tab
-    @State var currentTab: String = "Home"
+    @State var currentTab: String = "Test"
     
     // Menu option...
     @State var showMenu: Bool = false
@@ -22,7 +22,7 @@ struct MainScreenView: View {
     
     var body: some View {
         
-        ZStack {
+        ZStack(alignment: .topLeading) {
             // Custom Side Menu...
             SideMenu(currentTab: $currentTab)
                
@@ -43,7 +43,7 @@ struct MainScreenView: View {
              //   .ignoresSafeArea()
                 
          
-        }
+        }.navigationBarHidden(true)
         // Always dark mode
         .preferredColorScheme(.dark)
     }

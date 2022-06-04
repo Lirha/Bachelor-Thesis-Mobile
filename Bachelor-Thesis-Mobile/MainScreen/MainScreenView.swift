@@ -22,7 +22,7 @@ struct MainScreenView: View {
     
     var body: some View {
         
-        ZStack(alignment: .topLeading) {
+        ZStack {
             // Custom Side Menu...
             SideMenu(currentTab: $currentTab)
                
@@ -37,13 +37,10 @@ struct MainScreenView: View {
                 .rotation3DEffect(.init(degrees: showMenu ? -15 : 0), axis: (x: 0,y: 1, z: 0))
             
             //Moving View apart
-                .offset(x: showMenu ? getRect().width / 2 : 0)
+                .offset(x: showMenu ? getRect().width / 2 : 0, y: 0)
             
-            // if I use this, I won't be able te go back to the other screen
-             //   .ignoresSafeArea()
-                
-         
-        }.navigationBarHidden(true)
+        }
+        .navigationBarHidden(true)
         // Always dark mode
         .preferredColorScheme(.dark)
     }

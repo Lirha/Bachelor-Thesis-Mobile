@@ -53,10 +53,10 @@ struct CustomTabView: View {
                 // Hiding when menu is visible
                     .opacity(showMenu ? 0 : 1)
             )
-            .padding([.horizontal, .top])
+//            .padding([.horizontal, .top])
             .padding(.bottom, 8)
-            .padding(.top, 8)
-            .padding(.top, getSafeArea().top)
+//            .padding(.top, 8)
+//            .padding(.top, getSafeArea().top)
             
             TabView(selection: $currentTab) {
                 Home()
@@ -66,17 +66,19 @@ struct CustomTabView: View {
                 AddDataView()
                     .tag("Test")
                 
-                Text("Profile")
-                    .tag("Profile")
+                Text("Profile").navigationBarHidden(true)
+//                    .navigationTitle("")
+//                    .tag("Profile")
                 
-                Text("Settings")
-                    .tag("Settings")
+                Text("Settings").navigationBarHidden(true)
+//                    .navigationTitle("")
+//                    .tag("Settings")
             }
             
         }
         // Disabling actions when menu is visible...
         .disabled(showMenu)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .overlay(
             // Close Button
             Button {

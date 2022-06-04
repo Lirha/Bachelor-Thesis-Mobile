@@ -51,17 +51,14 @@ struct SideMenu: View {
             // Max width of screen width
             .frame(width: getRect().width / 2, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .leading)
-            
         }
         .padding(.leading, 10)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(
             Color.gray.opacity(0.1)
-          )
-        
-        // Not sure about this one
-     //  .ignoresSafeArea()
-        
+        )
+        .navigationBarHidden(true)
+            .navigationTitle("")
     }
     
     //Custom Button
@@ -110,9 +107,10 @@ struct SideMenu: View {
                     }
                 }
             )
+            .navigationTitle("")
+                .navigationBarHidden(true)
         }
         .offset(x: currentTab == title ? 15 : 0)
-        
     }
     
 }

@@ -29,7 +29,7 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationBarTitle("")
+          //  .navigationBarTitle("")
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
             .onAppear() {

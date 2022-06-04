@@ -131,7 +131,7 @@ struct LoginView: View {
                     NavigationLink("Sign up", destination: SignUpView())
                     
                 }, alignment: .bottom)
-            .navigationTitle("")
+//            .navigationTitle("")
             .navigationBarHidden(true)
     //    }
     }.preferredColorScheme(.dark)

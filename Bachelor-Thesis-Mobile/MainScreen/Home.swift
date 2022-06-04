@@ -12,7 +12,9 @@ struct Home: View {
         VStack {
             Text("")
         }
-        .ignoresSafeArea()
+        .navigationBarHidden(true)
+            .navigationTitle("")
+//        .ignoresSafeArea()
 //        VStack(alignment: .leading, spacing: 15) {
 //            Image("realisticHeart")
 //                .resizable()

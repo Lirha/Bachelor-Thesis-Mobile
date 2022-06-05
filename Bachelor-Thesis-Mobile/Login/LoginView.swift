@@ -17,16 +17,14 @@ struct LoginView: View {
     @State var showAlert = false
     @State var error = ""
     @State var errorMessage = ""
-//    @Binding var show : Bool
+
     
     
     @StateObject var viewModel = LoginViewModel()
-    
-//    init() {
-//        FirebaseApp.configure()
-//    }
+    @StateObject var service = Service()
+
     var body: some View {
-  //      NavigationView {
+
         ZStack {
             VStack {
                 HeartAnimationView()
@@ -56,7 +54,6 @@ struct LoginView: View {
                         
                         Divider()
                     })
-                    // .padding(.top, 50)
                     
                     //Password
                     VStack(alignment: .leading, spacing: 0, content: {
@@ -131,9 +128,9 @@ struct LoginView: View {
                     NavigationLink("Sign up", destination: SignUpView())
                     
                 }, alignment: .bottom)
-//            .navigationTitle("")
+
             .navigationBarHidden(true)
-    //    }
+
     }.preferredColorScheme(.dark)
 }
     
@@ -143,14 +140,13 @@ struct LoginView: View {
                 if let err = error {
                     print("Failed to login:", err)
                     self.error = "Failed to login: \(error!.localizedDescription)"
-//                    self.error = "Incorrect Email or Password"
-//                    self.errorMessage = "Please check your details and try again"
                     showAlert.toggle()
                     return
                 } else {
                     print("Success \(result?.user)")
                     UserDefaults.standard.set(true, forKey: "status")
                     NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                    service.fetch()
                 }
             }
         } else {
@@ -192,8 +188,6 @@ struct HeartAnimationView: View {
                 .scaledToFill()
                 .foregroundColor(animate ? Color.white : Color.black.opacity(0.8))
                 .frame(width: 190, height: 300)
-            //    .frame(width: 150, height: 250)
-            //  .frame(width: 50, height: 150)
                 .frame(width: animate ? 230 : 170, height: animate ? 330 : 280)
                 .shadow(color: animate ? Color.gray.opacity(0.7) : Color.black.opacity(0.1),
                         radius: animate ? 30 : 10,
@@ -202,7 +196,6 @@ struct HeartAnimationView: View {
                 .scaleEffect(animate ? 1.1 : 1.0)
                 .offset(y: animate ? -7 : 1)
             
-            // Daca decomentez Spacer() - ul asta, nu se mai plimba ecranul
             Spacer()
         }.onAppear(perform: addAnimation)
     }

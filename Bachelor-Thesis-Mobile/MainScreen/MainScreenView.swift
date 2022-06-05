@@ -46,12 +46,6 @@ struct MainScreenView: View {
     }
 }
 
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView()
-//    }
-//}
-
 extension View {
     
     func getSafeArea() -> UIEdgeInsets {

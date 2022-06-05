@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct AddDataView: View {
     
     @State var ageTextField: String = ""
@@ -136,96 +137,117 @@ struct AddDataView: View {
                         
                     }
                     
-                    //8. thalach
-                    VStack(alignment: .leading) {
-                        Text("Thalach")
-                            .foregroundColor(.white)
-                        TextField("Thalach", text: $thalachTextField)
+                    Group {
+                        
+                        //8. thalach
+                        VStack(alignment: .leading) {
+                            Text("Thalach")
+                                .foregroundColor(.white)
+                            TextField("Thalach", text: $thalachTextField)
+                                .padding()
+                                .background(Color.gray.opacity(0.3).cornerRadius(10))
+                                .foregroundColor(.white)
+                                .font(.headline)
+                        }.padding()
+                        
+                        //9. exercise induced angina
+                        
+                        HStack {
+                            Text("Exercise induced angina")
+                            Spacer()
+                            Picker(selection: $exangTextField) {
+                                Text("0").tag(0)
+                                Text("1").tag(1)
+                                
+                            } label: {
+                                Text("Exercise induced angina").foregroundColor(.white)
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
                             .padding()
                             .background(Color.gray.opacity(0.3).cornerRadius(10))
-                            .foregroundColor(.white)
-                            .font(.headline)
-                    }.padding()
-                    
-                    //9. exercise induced angina
-                    
-                    HStack {
-                        Text("Exercise induced angina")
-                        Spacer()
-                        Picker(selection: $exangTextField) {
-                            Text("0").tag(0)
-                            Text("1").tag(1)
+                            Spacer()
+                        }.padding()
+                        
+                        //10. ST depression induced by exercise
+                        VStack(alignment: .leading) {
+                            Text("ST depression induced by exercise (oldpeak)")
+                                .foregroundColor(.white)
+                            TextField("", text: $oldpeakTextField)
+                                .padding()
+                                .background(Color.gray.opacity(0.3).cornerRadius(10))
+                                .foregroundColor(.white)
+                                .font(.headline)
+                        }.padding()
+                        
+                        //11. Slope
+                        HStack {
+                            Text("Slope")
                             
-                        } label: {
-                            Text("Exercise induced angina").foregroundColor(.white)
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
-                        .padding()
-                        .background(Color.gray.opacity(0.3).cornerRadius(10))
-                        Spacer()
-                    }.padding()
-                    
-                    //10. ST depression induced by exercise
-                    VStack(alignment: .leading) {
-                        Text("ST depression induced by exercise (oldpeak)")
-                            .foregroundColor(.white)
-                        TextField("", text: $oldpeakTextField)
+                            Picker(selection: $slopeTextField) {
+                                Text("0").tag(0)
+                                Text("1").tag(1)
+                                Text("2").tag(2)
+                            } label: {
+                                Text("Slope").foregroundColor(.white)
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
                             .padding()
                             .background(Color.gray.opacity(0.3).cornerRadius(10))
-                            .foregroundColor(.white)
-                            .font(.headline)
-                    }.padding()
-                    
-                    //11. Slope
-                    HStack {
-                        Text("Slope")
+                            Spacer()
+                        }.padding()
                         
-                        Picker(selection: $slopeTextField) {
-                            Text("0").tag(0)
-                            Text("1").tag(1)
-                            Text("2").tag(2)
-                        } label: {
-                            Text("Slope").foregroundColor(.white)
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
-                        .padding()
-                        .background(Color.gray.opacity(0.3).cornerRadius(10))
-                        Spacer()
-                    }.padding()
-                    
-                    //12. ca - number of major vessels
-                    VStack(alignment: .leading) {
-                        Text("Number of major vessels")
-                            .foregroundColor(.white)
-                        TextField("", text: $numberOfMajorVessels)
+                        //12. ca - number of major vessels
+                        VStack(alignment: .leading) {
+                            Text("Number of major vessels")
+                                .foregroundColor(.white)
+                            TextField("", text: $numberOfMajorVessels)
+                                .padding()
+                                .background(Color.gray.opacity(0.3).cornerRadius(10))
+                                .foregroundColor(.white)
+                                .font(.headline)
+                        }.padding()
+                        
+                        //13. thal - thalium stress result
+                        HStack {
+                            Text("Thalium stress resul")
+                            
+                            Picker(selection: $thalTextField) {
+                                Text("0").tag(0)
+                                Text("1").tag(1)
+                            } label: {
+                                Text("Thalium stress resul").foregroundColor(.white)
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
                             .padding()
                             .background(Color.gray.opacity(0.3).cornerRadius(10))
-                            .foregroundColor(.white)
-                            .font(.headline)
-                    }.padding()
+                            Spacer()
+                        }.padding()
+                    }
                     
-                    //13. thal - thalium stress result
-                    HStack {
-                        Text("Thalium stress resul")
-                        
-                        Picker(selection: $thalTextField) {
-                            Text("0").tag(0)
-                            Text("1").tag(1)
-                        } label: {
-                            Text("Thalium stress resul").foregroundColor(.white)
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
-                        .padding()
-                        .background(Color.gray.opacity(0.3).cornerRadius(10))
-                        Spacer()
-                    }.padding()
+                    Button {
+                        save()
+                    } label: {
+                        Text("Submit".uppercased())
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .padding()
+                            .padding(.horizontal, 20)
+                            .background(Color.gray.opacity(0.3).cornerRadius(10))
+                            .padding(.bottom)
+                    }
                 }
             }
         }.navigationBarHidden(true)
             .navigationTitle("")
     }
+    
+    func save() {
+        var firstInfo =  PacientData(age: ageTextField, gender: selectedGender, cp: selectedCp, trestbps: trestbps, chol: cholTextField, fbs: fbsTextField, restecg: restecgTextField, thalach: thalachTextField, exang: exangTextField, oldpeak: oldpeakTextField, slope: slopeTextField, numberOfMajorVessels: numberOfMajorVessels, thal: thalTextField)
+        Text("\(ageTextField)")
+    }
 }
-// .pickerStyle(SegmentedPickerStyle())
+
 struct AddDataView_Previews: PreviewProvider {
     static var previews: some View {
         AddDataView()

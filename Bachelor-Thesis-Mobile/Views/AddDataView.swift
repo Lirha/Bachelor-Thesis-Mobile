@@ -21,8 +21,10 @@ struct AddDataView: View {
     @State var exangTextField: Int = 0
     @State var oldpeakTextField: String = ""
     @State var slopeTextField: Int = 0
-    @State var numberOfMajorVessels: String = ""
+    @State var ca: String = ""
     @State var thalTextField: Int = 0
+    
+    @StateObject var service = Service()
     
     var body: some View {
         VStack {
@@ -200,7 +202,7 @@ struct AddDataView: View {
                         VStack(alignment: .leading) {
                             Text("Number of major vessels")
                                 .foregroundColor(.white)
-                            TextField("", text: $numberOfMajorVessels)
+                            TextField("", text: $ca)
                                 .padding()
                                 .background(Color.gray.opacity(0.3).cornerRadius(10))
                                 .foregroundColor(.white)
@@ -226,6 +228,8 @@ struct AddDataView: View {
                     
                     Button {
                         save()
+                        let body: [String: Any] = ["name":1,"age":2]
+                        service.loadData(body: body)
                     } label: {
                         Text("Submit".uppercased())
                             .font(.headline)
@@ -243,8 +247,8 @@ struct AddDataView: View {
     }
     
     func save() {
-        var firstInfo =  PacientData(age: ageTextField, gender: selectedGender, cp: selectedCp, trestbps: trestbps, chol: cholTextField, fbs: fbsTextField, restecg: restecgTextField, thalach: thalachTextField, exang: exangTextField, oldpeak: oldpeakTextField, slope: slopeTextField, numberOfMajorVessels: numberOfMajorVessels, thal: thalTextField)
-        Text("\(ageTextField)")
+        var firstInfo =  PacientData(age: ageTextField, sex: selectedGender, cp: selectedCp, trestbps: trestbps, chol: cholTextField, fbs: fbsTextField, restecg: restecgTextField, thalach: thalachTextField, exang: exangTextField, oldpeak: oldpeakTextField, slope: slopeTextField, ca: ca, thal: thalTextField)
+         Text("\(ageTextField)")
     }
 }
 

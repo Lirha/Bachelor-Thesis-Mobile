@@ -146,7 +146,9 @@ struct LoginView: View {
                     print("Success \(result?.user)")
                     UserDefaults.standard.set(true, forKey: "status")
                     NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
-                    service.fetch()
+ //                   service.test()
+//                    service.fetch()
+                 //   service.loadData()
                 }
             }
         } else {

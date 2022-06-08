@@ -61,7 +61,6 @@ class Service: ObservableObject {
                 print(error)
                 return
             }
-            
             if let data = data {
               //  print(String(data:data, encoding: .utf8)!)
                 do {
@@ -72,6 +71,8 @@ class Service: ObservableObject {
                 }catch let error {
                     print("WE couldn't parse the data into JSON", error)
                 }
+                
+                print("Response\(response)")
             }
         }.resume()
     }

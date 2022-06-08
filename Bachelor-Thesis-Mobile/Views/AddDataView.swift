@@ -22,9 +22,10 @@ struct AddDataView: View {
     @State var oldpeakTextField: String = ""
     @State var slopeTextField: Int = 0
     @State var ca: String = ""
-    @State var thalTextField: Int = 0
+    @State var thalTextField: String = ""
     
     @StateObject var service = Service()
+    @State var firstInfo: PacientData?
     
     var body: some View {
         VStack {
@@ -213,22 +214,30 @@ struct AddDataView: View {
                         HStack {
                             Text("Thalium stress resul")
                             
-                            Picker(selection: $thalTextField) {
-                                Text("0").tag(0)
-                                Text("1").tag(1)
-                            } label: {
-                                Text("Thalium stress resul").foregroundColor(.white)
-                            }
-                            .pickerStyle(SegmentedPickerStyle())
-                            .padding()
-                            .background(Color.gray.opacity(0.3).cornerRadius(10))
-                            Spacer()
+//                            Picker(selection: $thalTextField) {
+//                                Text("0").tag(0)
+//                                Text("1").tag(1)
+//                            } label: {
+//                                Text("Thalium stress resul").foregroundColor(.white)
+//                            }
+//                            .pickerStyle(SegmentedPickerStyle())
+//                            .padding()
+//                            .background(Color.gray.opacity(0.3).cornerRadius(10))
+//                            Spacer()
+                            TextField("", text: $thalTextField)
+                                .padding()
+                                .background(Color.gray.opacity(0.3).cornerRadius(10))
+                                .foregroundColor(.white)
+                                .font(.headline)
                         }.padding()
                     }
                     
                     Button {
                         save()
-                        let body: [String: Any] = ["name":1,"age":2]
+                       // let body: [String: Any] = ["name":1,"age":2]
+                        guard let body = firstInfo?.nsDictionary else {
+                            return
+                        }
                         service.loadData(body: body)
                     } label: {
                         Text("Submit".uppercased())
@@ -247,13 +256,12 @@ struct AddDataView: View {
     }
     
     func save() {
-        var firstInfo =  PacientData(age: ageTextField, sex: selectedGender, cp: selectedCp, trestbps: trestbps, chol: cholTextField, fbs: fbsTextField, restecg: restecgTextField, thalach: thalachTextField, exang: exangTextField, oldpeak: oldpeakTextField, slope: slopeTextField, ca: ca, thal: thalTextField)
-         Text("\(ageTextField)")
+        self.firstInfo =  PacientData(age: ageTextField, sex: selectedGender, cp: selectedCp, trestbps: trestbps, chol: cholTextField, fbs: fbsTextField, restecg: restecgTextField, thalach: thalachTextField, exang: exangTextField, oldpeak: oldpeakTextField, slope: slopeTextField, ca: ca, thal: thalTextField)
     }
 }
 
-struct AddDataView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddDataView()
-    }
-}
+//struct AddDataView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddDataView()
+//    }
+//}

@@ -23,7 +23,7 @@ struct PacientData {
     var thal: Int
     var target: Int
     
-    init(age: String, sex: String, cp: Int, trestbps: String, chol: String, fbs: Int, restecg: Int, thalach: String, exang: Int, oldpeak: String, slope: Int, ca: String, thal: Int) {
+    init(age: String, sex: String, cp: Int, trestbps: String, chol: String, fbs: Int, restecg: Int, thalach: String, exang: Int, oldpeak: String, slope: Int, ca: String, thal: String) {
         self.age = Int(age) ?? 0
         self.sex = sex == "Male" ? 1 : 0
         self.cp = cp
@@ -36,7 +36,7 @@ struct PacientData {
         self.oldpeak = Int(oldpeak) ?? 0
         self.slope = slope
         self.ca = Int(ca) ?? 0
-        self.thal = thal
+        self.thal = Int(thal) ?? 0
         self.target = 1
     }
 
@@ -57,7 +57,7 @@ struct PacientData {
                     "target": target
             ]
         }
-        var nsDictionary: NSDictionary {
-            return dictionary as NSDictionary
+    var nsDictionary: [String: Any] {
+            return dictionary as Dictionary
         }
 }

@@ -16,6 +16,7 @@
 		42123323284106E200425ED4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42123322284106E200425ED4 /* Home.swift */; };
 		4225AB6A284BF5FE0054E7F0 /* PacientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4225AB69284BF5FE0054E7F0 /* PacientData.swift */; };
 		4225AB6D284BF6980054E7F0 /* AddDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4225AB6C284BF6980054E7F0 /* AddDataViewModel.swift */; };
+		4248AF5A2851211C00A853B4 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248AF592851211C00A853B4 /* ResultView.swift */; };
 		425F7BD8284D3E54004CEA6B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F7BD7284D3E54004CEA6B /* Service.swift */; };
 		42B500A128317B940064FFA5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B500A028317B940064FFA5 /* LoginViewModel.swift */; };
 		42B500A32831A0880064FFA5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B500A22831A0880064FFA5 /* ErrorView.swift */; };
@@ -64,6 +65,7 @@
 		42123322284106E200425ED4 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		4225AB69284BF5FE0054E7F0 /* PacientData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientData.swift; sourceTree = "<group>"; };
 		4225AB6C284BF6980054E7F0 /* AddDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataViewModel.swift; sourceTree = "<group>"; };
+		4248AF592851211C00A853B4 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		425F7BD7284D3E54004CEA6B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		42B500A028317B940064FFA5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		42B500A22831A0880064FFA5 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				42BAD22028416211001D98CE /* AddDataView.swift */,
 				42123322284106E200425ED4 /* Home.swift */,
+				4248AF592851211C00A853B4 /* ResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				42C3320B2825B688005D90FC /* SignUpViewModel.swift in Sources */,
 				42BF7FF528267E3C00A315FF /* MainScreenView.swift in Sources */,
 				42B500A128317B940064FFA5 /* LoginViewModel.swift in Sources */,
+				4248AF5A2851211C00A853B4 /* ResultView.swift in Sources */,
 				421233212841068800425ED4 /* CustomTabView.swift in Sources */,
 				4225AB6A284BF5FE0054E7F0 /* PacientData.swift in Sources */,
 			);

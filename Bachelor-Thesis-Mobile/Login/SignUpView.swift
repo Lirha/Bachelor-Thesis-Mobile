@@ -58,7 +58,7 @@ struct SignUpView: View {
                     HStack {
                         if self.visible {
                             HStack {
-                                TextField("password", text: $email)
+                                TextField("password", text: $password)
                                     .font(.system(size: 18, weight: .semibold))
                                     .foregroundColor(.white)
                                     .padding(.top, 5)
@@ -88,7 +88,7 @@ struct SignUpView: View {
                     HStack {
                         if self.revisible {
                                 HStack {
-                                    TextField("confirm password", text: $email)
+                                    TextField("confirm password", text: $password)
                                         .font(.system(size: 18, weight: .semibold))
                                         .foregroundColor(.white)
                                         .padding(.top, 5)

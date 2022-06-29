@@ -27,8 +27,12 @@ struct LoginView: View {
 
         ZStack {
             VStack {
-                HeartAnimationView()
                 Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                HeartAnimationView()
                 
                 // Login
                 VStack {
@@ -107,7 +111,7 @@ struct LoginView: View {
                     Button {
                         resetPassword()
                     } label: {
-                        Text("Forget password")
+                        Text("Forgot password?")
                             .fontWeight(.bold)
                             .foregroundColor(.gray)
                     }.frame(maxWidth: .infinity, alignment: .trailing)
@@ -122,7 +126,7 @@ struct LoginView: View {
             }
             .overlay(
                 HStack {
-                    Text("New Member")
+                    Text("New Member?")
                         .fontWeight(.bold)
                         .foregroundColor(.gray)
                     NavigationLink("Sign up", destination: SignUpView())
@@ -190,7 +194,7 @@ struct HeartAnimationView: View {
                 .scaledToFill()
                 .foregroundColor(animate ? Color.white : Color.black.opacity(0.8))
                 .frame(width: 190, height: 300)
-                .frame(width: animate ? 230 : 170, height: animate ? 330 : 280)
+                .frame(width: animate ? 130 : 70, height: animate ? 230 : 210)
                 .shadow(color: animate ? Color.gray.opacity(0.7) : Color.black.opacity(0.1),
                         radius: animate ? 30 : 10,
                         x: 0,
@@ -198,6 +202,8 @@ struct HeartAnimationView: View {
                 .scaleEffect(animate ? 1.1 : 1.0)
                 .offset(y: animate ? -7 : 1)
             
+            Spacer()
+            Spacer()
             Spacer()
         }.onAppear(perform: addAnimation)
     }

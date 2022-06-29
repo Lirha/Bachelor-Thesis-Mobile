@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
+
+class AddDataViewModel: ObservableObject {
+    
+    @StateObject var service = Service()
+    
+//    func fetchData(body: [String: Any]) {
+//        service.loadData(body: body)
+//    }
+}

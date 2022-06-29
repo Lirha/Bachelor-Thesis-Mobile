@@ -15,6 +15,7 @@ struct Bachelor_Thesis_MobileApp: App {
         WindowGroup {
             //  HomeScreenView()
             ContentView()
+           // ResultView()
         }
     }
 }

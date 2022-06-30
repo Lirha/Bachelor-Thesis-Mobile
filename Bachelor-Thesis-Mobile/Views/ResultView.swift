@@ -25,7 +25,7 @@ struct ResultView: View {
                                            startRadius: 2,
                                            endRadius: 180))
             .padding(80)
-            Text(result == 1 ? "Sick" : "Healty" )
+            Text(result == 1 ? "Sick" : "Healthy" )
                 .font(.headline)
                 .foregroundColor(.black)
         }   .background(

@@ -28,10 +28,7 @@ struct LoginView: View {
         ZStack {
             VStack {
                 Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
+
                 HeartAnimationView()
                 
                 // Login
@@ -194,7 +191,7 @@ struct HeartAnimationView: View {
                 .scaledToFill()
                 .foregroundColor(animate ? Color.white : Color.black.opacity(0.8))
                 .frame(width: 190, height: 300)
-                .frame(width: animate ? 130 : 70, height: animate ? 230 : 210)
+                .frame(width: animate ? 230 : 170, height: animate ? 330 : 280)
                 .shadow(color: animate ? Color.gray.opacity(0.7) : Color.black.opacity(0.1),
                         radius: animate ? 30 : 10,
                         x: 0,
